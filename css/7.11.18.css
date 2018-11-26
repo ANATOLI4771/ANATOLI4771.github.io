@@ -1,0 +1,140 @@
+
+
+.grid{
+	display: grid;
+		grid-template-columns:repeat(4,1fr);				/*	grid-template-columns:repeat(auto-fit, minmax(320px,1fr));*/
+	grid-gap:10px;
+	
+	grid-template-areas:
+		"head"
+		"header"
+		"article"
+		"aside"
+		"footer";
+}	
+	h1{
+		text-align: center;
+	}
+	h3{
+		text-align-last: right;
+	}
+	.span class{
+		color: red;
+	}
+}
+.red{
+	color: rgb(141, 28, 73)139, 130, 134);
+}
+.header1{
+	grid-area:Шапка;
+}
+header{
+	grid-area:header;
+	background-color: aquamarine;
+}/*
+header2{
+	grid-area:head;
+	background-color: #bbb;
+	}*/
+article{	
+	grid-area:article;}
+aside{
+		grid-area:aside;
+		
+	}
+footer{
+		grid-area:footer;
+	}
+	
+
+@media(min-width: 620px){
+	.grid{
+		grid-template-columns:2fr 4fr;
+		grid-template-areas:
+		  "Шапка Шапка"
+		  "header header"
+		 
+		  "aside article"
+		  "aside footer"
+		 
+}}
+
+.grid > *  {
+	background-color: #111;
+	border: 2px solid #212941;/*red;*/
+	border-radius: 5px;
+	padding: 8px 15px;
+	color: #ffffff;
+	font-size: 18px;
+	font-family: roboto;
+}
+/*.grid > *:nth-child (odd){
+	background-color: #475467;
+}*/
+
+.grid div.subitems {
+	display: grid;
+	grid-template-columns:repeat(auto-fit, minmax(120px,1fr));
+	grid-auto-rows:minmax(50px,auto);
+	/*background-color: #2831329;*/
+	grid-gap: 2px;
+}
+
+.grid div.subitems div {
+	background-color: #181e2f;
+}
+
+.span-2 {
+	grid-column-end: span 2;
+}
+
+@media(min-width: 960px){
+	.grid{
+		grid-template-columns:1fr 2fr 2fr 2fr;
+		grid-template-areas:
+		  "head Шапка Шапка Шапка"
+		  "header header header header"
+		 
+		  "aside aside article article "
+		  "aside aside footer footer";
+		 
+		 
+}}
+
+.zit
+{
+    position:relative;
+    width:80px;
+    height:80px;
+    right: ;:0px;
+    bottom: ;:0px;
+    border:2px solid black;
+    /* Apply a CSS3 Transition to width, height, top and left properties */
+    /*transition: width 0.3s ease,height 0.3s ease,left 0.3s ease,top 0.3s ease;
+    -webkit-transition: width 0.3s ease,height 0.3s ease,left 0.3s ease,top 0.3s ease;
+    -o-transition: width 0.3s ease,height 0.3s ease,left 0.3s ease,top 0.3s ease;*/
+    -moz-transition: width 0.3s ease,height 0.3s ease,right 0.3s ease,bottom 0.3s ease;
+}
+
+.zit:hover
+{
+    width:400px;
+    height:350px;
+    right:320px;
+    bottom:260px;
+    z-index:9999;
+}
+
+.ZoomIt ul
+{
+clear:both;
+}
+.ZoomIt li
+{
+width:102px;
+height:82px;
+margin:4px;
+float: left;
+overflow:visible;
+display: block;
+}
